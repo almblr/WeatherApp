@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5fc35d441e.js" crossorigin="anonymous"></script>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            padding:0;
+            margin: 0;
+        }
+        body {
+            background-image: url(./oui.jpg);
+            padding:5% 20%;
+            height: 100%;
+        }
+        #bodiv {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding:10% 5%;
+            gap: 100px;
+            height: 100%;
+            background-color: rgba(70, 65, 104, 0.377);
+            border-radius: 25px;
+            box-shadow: -1px 4px 25px -6px rgba(24, 23, 22, 0.904);
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+            font-family: 'Inter', sans-serif;
+        }
+        header > h1 {
+            color:white;
+        }
+        #form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap:2px;
+        }
+        #citynput {
+            display:flex;
+            height: 35px;
+            padding-left:5px;
+        }
+        #citynput:focus{
+            outline:3px solid rgba(92, 31, 104, 0.63); /* bordure externe */
+
+            
+        }
+        #buttonform {
+            width: 100%;
+            height: 35px;
+            background-color: rgba(82, 102, 155, 0.753);
+            color:black;
+            border:none;
+            transition: all 0.2s;
+        }
+        #buttonform:hover {
+            background-color: rgba(48, 62, 102, 0.753);
+            transition: all 0.2s;
+        }
+        main {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 500px;
+            gap: 5px;
+        }
+        .box {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width:49.5%;
+            font-size: 30px;
+            height: 50%;
+            color : white;
+            gap : 15px;
+            border: solid 2px rgba(255, 255, 255, 0.089);
+            transition: all 0.5s;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .box:hover {
+            transform: scale(1.015);
+            transition: all 0.2s;
+        }
+        .iconeBox {
+            font-size: 40px;
+        }
+        .divCity {
+            background-color: rgba(68, 60, 117, 0.5);
+            gap:initial;
+        }
+        .divCity img {
+            width: 75px;
+        }
+        .divTemp {
+            background-color: rgba(41, 66, 52, 0.5);
+        }
+        .divHumidity {
+            background-color: rgba(200, 160, 206, 0.5);
+        }
+        .divWind {
+            background-color: rgba(110, 97, 114, 0.5);
+        }
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        @media all and (max-width:940px) {
+            .box {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width:100%;
+            height: 23%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="bodiv">
+    <header>
+        <h1> Météo</h1>
+        <div id="form">
+            <input id="citynput" name ="météo" type="text" placeholder="Paris">
+            <button id="buttonform">Voir</button>
+        </div>
+    </header>
+    <main>
+        <div class="divCity box"></div>
+        <div class="divTemp box"></div>
+        <div class="divHumidity box"></div>
+        <div class="divWind box"></div>
+    </main>
+</div>
+    <script src="meteo.js"></script>
+</body>
+</html>
