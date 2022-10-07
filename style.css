@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url(./background.jpg);
+  padding: 2% 10%;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2% 3%;
+  gap: 50px;
+  height: 100%;
+  background-color: rgba(70, 65, 104, 0.377);
+  border-radius: 25px;
+  box-shadow: -1px 4px 25px -6px rgba(24, 23, 22, 0.904);
+}
+
+.icon {
+  font-size: 40px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+header > h1 {
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2px;
+}
+
+.form_input {
+  display: flex;
+  height: 35px;
+  padding-left: 5px;
+}
+
+.form_input:focus {
+  outline: 3px solid rgba(92, 31, 104, 0.63); /* bordure externe */
+}
+
+.form_btn {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(82, 102, 155, 0.753);
+  color: black;
+  border: none;
+  transition: all 0.2s;
+}
+
+.form_btn:hover {
+  background-color: rgba(48, 62, 102, 0.753);
+  transition: all 0.2s;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 500px;
+  gap: 5px;
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 49.5%;
+  font-size: 30px;
+  height: 50%;
+  color: white;
+  gap: 15px;
+  transition: all 0.5s;
+  border-radius: 10px;
+  text-align: center;
+}
+
+main div:hover {
+  transform: scale(1.015);
+  transition: all 0.2s;
+}
+
+.divCity {
+  background-color: rgba(68, 60, 117, 0.5);
+  gap: initial;
+}
+
+.divCity img {
+  width: 75px;
+}
+
+.divTemp {
+  background-color: rgba(41, 66, 52, 0.5);
+}
+
+.divHumidity {
+  background-color: rgba(200, 160, 206, 0.5);
+}
+
+.divWind {
+  background-color: rgba(110, 97, 114, 0.5);
+}
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media all and (max-width: 940px) {
+  body {
+    padding: 2% 5%;
+  }
+  main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 23%;
+  }
+}
